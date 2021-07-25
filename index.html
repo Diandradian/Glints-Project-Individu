@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +9,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
-    <script src="script.js"></script>
-      <script>function myFunction() {
-      var element = document.body;element.classList.toggle("dark-mode");
-       }
-     </script>
-    <header>
+  <script src="script.js"></script>
+    
+    <section class="header">
     <div class="container">
+      <div class="header-wrapper">
         <div class="header-left">
-          <img class="logo" src="socialbutterfly_header.png">
-          <button onclick="myFunction()">Toggle dark mode</button>
-        </div>
+        <img class="logo" src="socialbutterfly_header.png">
+      </div>
+  
         <!-- Add a menu icon here -->
         <div class="menu-icon">
         <span class="fa fa-bars menu-icon"></span>
         </div>
-        <div class="header-right">
-          <a href="#">Passions</a>
-          <a href="#">Sign in</a>
-          <a href="#" class="login">Log in</a>
+        <ul id="nav" class="header-right"></ul>
+          <li><a href="#">Passions</a></li>
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#" class="login">Log in</a></li>
+        </div>
+        <div class="hamburger-menu">
+          <img src="hamburger-menu.svg" alt="menu" />
         </div>
       </div>
-    </header>
+      <button onclick="myFunction()" class="dark-mode-botton">
+        <img class="dark-mode-img"  src="night-mode.svg">
+        </button>
+     </header>
+    </section>
+    
     <div class="top-wrapper">
       <div class="container">
         <h1>Let's Be Social Butterfly!.</h1>
@@ -117,6 +123,7 @@
             <li>Contact us</li>
           </ul>
         </div>
+      </div>
     </footer>
   </body>
 </html>

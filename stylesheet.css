@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 }
 
 body {
-  background-color: rgb(217, 226, 230);
+  transition: all 1s;
 }
 
 h1 {
@@ -22,13 +22,14 @@ h1 {
 
 body {
   font-family: "Lucida Grande";
+  margin: 0;
 }
 
 body {
   padding: 25px;
   background-color: white;
   color: black;
-  font-size: 25px;
+  font-size: 16px;
 }
 
 
@@ -40,11 +41,133 @@ a {
   clear: left;
 }
 
-.container {
-  max-width: 1170px;
+.header {
+  position: relative;
   width: 100%;
-  padding: 0 15px;
-  margin: 0 auto ;
+  background-color: rgb(11, 12, 12);
+  color: #fff;
+  z-index: 100;
+}
+
+.container {
+  margin: 0 15px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: rgb(11, 12, 12);
+  color: rgb(255, 255, 255);
+  z-index: 100;
+}
+
+.logo {
+  width: 200px;
+}
+.container {
+  margin: 0 15px;
+}
+
+.dark-mode-img {
+  width: 20px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header-left a {
+  padding: 5px 10px;
+}
+
+.header li {
+ display: block;
+}
+
+.header a {
+  color: white;
+  size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger-menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+.dark-mode-img {
+  width: 20px;
+}
+
+.dark-mode-botton {
+  background: transparent;
+}
+
+.header-right {
+  display: block;
+  font-size: 25px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.header-right a {
+  display:contents;
+  padding: 17px;
+}
+
+.header-right a:hover {
+  background-color: rgb(91, 91, 94);
+  opacity: 1;
+  color: #fff;
+}
+
+
+@media (max-width: 670px){
+  .header-wrapper {
+      display: inline-block;
+  }
+
+  .header-right {
+      position: fixed;
+      left: -100%;
+      top: 3rem;
+      flex-direction: column;
+      background-color: rgb(226, 240, 240);
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(130, 175, 241, 0.05);
+  }
+
+  .header-right.active {
+      left: 0;
+  }
+
+  .btn-burger {
+      display: block;
+  }
 }
 
 .top-wrapper {
@@ -57,8 +180,9 @@ a {
 
 .top-wrapper h1 {
   opacity: 0.7;
-  font-size: 45px;
+  font-size: 32px;
   letter-spacing: 5px;
+  color:white;
   margin-bottom: 10px;
 }
 
@@ -67,9 +191,16 @@ a {
   margin-bottom: 3px;
 }
 
+.message-wrapper {
+  background-color: rgb(72, 117, 133);
+}
 .btn-wrapper {
   text-align: center;
   margin: 20px 0;
+}
+.btn-message {
+  background-color: rgb(233, 239, 241);
+  color: rgb(17, 88, 155);
 }
 
 .btn-wrapper p {
@@ -106,55 +237,15 @@ a {
   margin-right: 5px;
 }
 
-header {
-  height: 120px;
-  width: 100%;
-  background-color: rgba(1, 8, 10, 0.9);
-  position : fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-.logo {
-  width: 300px;
-}
-
-.header-left {
-  float: left;
-}
-
 
 .menu-icon {
   color: white;
   float: right;
-  font-size: 25px;
+  font-size: 18px;
   padding: 10px 20px;
   display:table-column;
 }
 
-.header-right {
-  float: right5;
-  margin: 30px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
 
 .features-wrapper {
   padding-bottom: 80px;
@@ -167,7 +258,7 @@ header {
 .heading {
   padding-top: 80px;
   padding-bottom: 60px;
-  color: #5f5d60;
+  color: #f2ecf5;
 }
 
 .heading h2 {
@@ -175,7 +266,7 @@ header {
   opacity: 0.7;
   letter-spacing: 1px;
   margin-bottom: 5px;
-  font-size: 50x;
+  font-size: 32px;
   position: relative;
   animation: text 3s 1;
 }
@@ -210,8 +301,8 @@ header {
   width: 100%;
   display:block;
   margin-top: -40px;
-  font-size: 20px;
-  color: #060707;
+  font-size: 16px;
+  color: #101111;
   padding: 25px 50px;
 }
 
@@ -227,9 +318,9 @@ header {
 
 .message {
   padding: 15px 40px;
-  background-color: #5783ac;
+  background-color: #158ace;
   cursor: pointer;
-  box-shadow: 0 7px #2989b6;
+  box-shadow: 0 7px #7ca3b4;
 }
 
 .message:active {
@@ -238,24 +329,21 @@ header {
   box-shadow: none;
 }
 
-.contact-form {
-  padding-top: 50px;
-}
 
 /* Add CSS for <input> and <textarea> tags */
 input, textarea {
-  width: 400px;
+  width: 300px;
   margin-top: 10px;
   margin-bottom: 30px;
   padding: 20px;
-  font-size: 18px;
-  border: 1px solid #dee7ec;
+  font-size: 16px;
+  border: 1px solid #234557;
 }
 
 /* Add CSS for contact-submit */
 .contact-submit {
-  background-color: #dee7ec;
-  color: #889eab;
+  background-color: #5586a0;
+  color: #f7fbfd;
 }
 
 .footer {
@@ -277,15 +365,22 @@ input, textarea {
 .footer-list li {
   display: block;
   padding: 3px 6px;
-  font-size: medium;
+  font-size: small;
 }
 
 /* Write your code below */
 .menu-icon {
   color: white;
   float: right;
-  font-size: 25px;
+  font-size: 18px;
   padding: -21px 0;
   /* Change the display property to none*/
   display: none;
+}
+
+
+.hamburger-menu img {
+  background-color: white;
+  width: 30px;
+  margin: 0;
 }
